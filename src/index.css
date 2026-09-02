@@ -123,3 +123,71 @@ html, body {
   margin: 0 !important;
   padding: 0 !important;
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400;500&display=swap');
+
+* { 
+  box-sizing: border-box; 
+}
+
+body { 
+  margin: 0; 
+  background: #FFFBF0; 
+  font-family: 'Inter', sans-serif;
+}
+
+/* ===== MOBILE RESPONSIVE - MAKES PHONE LOOK GOOD ===== */
+@media (max-width: 768px) {
+  nav { 
+    padding: 14px 20px !important; 
+  }
+  
+  nav div { 
+    gap: 16px !important; 
+  }
+
+  /* Home big banner */
+  section {
+    height: 70vh !important;
+    min-height: 400px !important;
+  }
+
+  section h1 {
+    font-size: 44px !important;
+  }
+
+  section > div {
+    padding: 0 20px !important;
+  }
+
+  /* Shop image banner */
+  div[style*="height: 380px"] {
+    height: 260px !important;
+    padding: 0 20px !important;
+  }
+
+  div[style*="height: 380px"] h1 {
+    font-size: 38px !important;
+  }
+
+  /* Products - 1 column on phone, 2 on tablet */
+  div[style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Padding for product section */
+  div[style*="padding: 50px 60px"] {
+    padding: 20px !important;
+  }
+  div[style*="padding: 0px 60px"] {
+    padding: 0 20px !important;
+  }
+}
+
+/* Tablet - 2 columns */
+@media (min-width: 769px) and (max-width: 1024px) {
+  div[style*="gridTemplateColumns"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
